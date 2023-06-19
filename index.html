@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>Station 5</h1>
+    <h1>Station 5_3</h1>
     <div id="question"></div>
     <div id="options"></div>
     <button onclick="nextQuestion()">SUBMIT</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("score21");
+    localStorage.removeItem("Station_5_3_Score");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -53,7 +53,7 @@ window.addEventListener('beforeunload', function() {
         ];
 
         let currentQuestion = 0;
-        let score21 = 0;
+        let Station_5_3_Score = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -95,9 +95,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        score21 = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Station_5_3_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        score21++; // Increment score for correct answer
+        Station_5_3_Score++; // Increment score for correct answer
     }
 }
 
@@ -108,8 +108,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("score21", score21);
-                alert("Quiz completed. Your score is " + score21);
+                localStorage.setItem("Station_5_3_Score", Station_5_3_Score);
+                alert("Quiz completed. Your score is " + Station_5_3_Score);
             } else {
                 displayQuestion();
             }
